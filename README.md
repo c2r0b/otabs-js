@@ -35,4 +35,4 @@ And then this when you want your tabbed content to appear:
 ```
 
 ##License
-MIT
+ GNU General Public License
