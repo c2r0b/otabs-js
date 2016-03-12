@@ -2,8 +2,7 @@
   $(document).ready(function() {
     // settings
     var sel_class = "active";
-    var rev_class = "reversed";
-    var last_class = "from_last";
+    var rev_class = "reverse";
 
     // controller
     $("ul.otabs").each(function() {
@@ -11,11 +10,14 @@
       // get info and objects
       var id = $(this).attr('rel');
       var reversed = $(this).hasClass(rev_class);
-      var from_last = $(this).hasClass(last_class);
       var n_items = $(this).children().size() - 1;
 
       // menu element to be selected at the beginning
-      var to_select = (from_last) ? n_items : 0;
+      var to_select = $(this).data('select');
+      if (to_select == 'last')
+        to_select = n_items;
+      else if (!parseInt(to_select) || to_select > n_items || to_select < 0)
+        to_select = 0;
 
       // init selection
       $(this).children().eq(to_select).addClass(sel_class);
