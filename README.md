@@ -1,4 +1,4 @@
-#ordered-tabs
+#ordered-tabs-jquery
 Library to create ordered tabbed content using in HTML using jQuery
 
 ##Synopsis
