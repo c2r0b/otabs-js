@@ -4,7 +4,7 @@ Library to create ordered tabbed content using jQuery
 ##Installation
 Simply include the js file (or minified js) to your html:
 ```html
-<script src="src/lib/otabs.js"></script>
+<script src="src/lib/otabs.min.js"></script>
 ```
 
 You'll need jQuery in order to make it work. You can include it from a CDN like this:
