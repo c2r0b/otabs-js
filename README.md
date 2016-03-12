@@ -64,7 +64,7 @@ You can reverse the display order of the content to be in the reversed order of 
 </ul>
 ####v1.0 [2015.3.11]
 <ul>
-  <li>First version.</li>
+  <li>First version</li>
 </ul>
 
 ##License
