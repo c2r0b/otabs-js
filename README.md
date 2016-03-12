@@ -7,7 +7,7 @@ This simple Javascript library has been created as a simple solution when you ne
 ##Installation
 Simply include the js file (or minified js) in your html:
 ```html
-<script src="src/lib/otabs.min.js"></script>
+<script src="otabs.min.js"></script>
 ```
 
 ##How to use
