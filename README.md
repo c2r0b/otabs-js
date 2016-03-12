@@ -34,7 +34,7 @@ And then this when you want your tabbed content to appear:
 </div>
 ```
 
-##Special uses
+##Secondary features
 You can select a specific tab at the beginning through the <b>data-select</b> attribute. Example:
 ```html
 <ul class="otabs" data-select="42" rel="WHATEVER_YOU_WANT">
