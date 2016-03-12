@@ -28,7 +28,7 @@ And then a thing like this when you want your tabbed content to appear:
 </div>
 ```
 
-###List-content binding
+####List-content binding
 If you're using this tool more than once in a page you'll need to bind each list with the appropriate tabbed content. You can simply do that using <b>rel</b> and <b>id</b> like this:
 ```html
 <ul class="otabs" rel="WHATEVER_YOU_WANT">
@@ -39,7 +39,7 @@ If you're using this tool more than once in a page you'll need to bind each list
 
 
 ##Secondary features
-###Specific selection
+####Specific selection
 You can select a specific tab using the <b>data-select</b> attribute. Examples:
 ```html
 <ul class="otabs" data-select="42">
@@ -50,7 +50,7 @@ You can select a specific tab using the <b>data-select</b> attribute. Examples:
   <li><b>last</b> for the last tabbed item</li>
 </ul>
 
-###Reverse order
+####Reverse order
 You can reverse the display order of the content to be in the reversed order of the menu by using the <b>reverse</b> class like this:
 ```html
 <ul class="otabs reverse">
