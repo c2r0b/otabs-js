@@ -34,5 +34,23 @@ And then this when you want your tabbed content to appear:
 </div>
 ```
 
+##Special uses
+You can select a specific tab at the beginning through the <b>data-select</b> attribute. Example:
+```html
+<ul class="otabs" data-select="42" rel="WHATEVER_YOU_WANT">
+```
+<b>NOTE:</b> the tabs ar numbered from 0 to N
+
+You can select the last list element at the beginning (the first is the default) by setting the attribute <i>data-select</i> to <b>last</b>. Example:
+```html
+<ul class="otabs" data-select="last" rel="WHATEVER_YOU_WANT">
+```
+
+You can reverse the display order of the content to be in the reversed order of the menu by using the <b>reverse</b> class like this:
+```html
+<ul class="otabs reverse" rel="WHATEVER_YOU_WANT">
+```
+
+
 ##License
  GNU General Public License
