@@ -13,21 +13,29 @@ Simply include the js file (or minified js) in your html:
 ##How to use
 In your html create a list with this template:
 ```html
-<ul class="otabs" rel="WHATEVER_YOU_WANT">
+<ul class="otabs">
   <li>..</li>
   ...
   <li>..</li>
 </ul>
 ```
-
 And then a thing like this when you want your tabbed content to appear:
 ```html
-<div class="otabs_content" id="WHATEVER_YOU_WANT">
+<div class="otabs_content">
   <div>..</div>
   ...
   <div>..</div>
 </div>
 ```
+
+If you're using this tool more than once in a page you'll need to bind each list with the appropriate tabbed content. You can simply do that using <b>rel</b> and <b>id</b> like this:
+```html
+<ul class="otabs" rel="WHATEVER_YOU_WANT">
+...
+<div class="otabs_content" id="WHATEVER_YOU_WANT">
+...
+```
+
 
 ##Secondary features
 You can select a specific tab using the <b>data-select</b> attribute. Examples:
