@@ -1,4 +1,4 @@
-/* oTabsJS - by Lorenzo Ganni - v1.0 [2015.3.12] */
+/* oTabsJS - by Lorenzo Ganni - v1.1 [2015.3.12] */
 (function () {
   // initalizer
   window.onload = function() {
@@ -34,7 +34,7 @@
       var id = $menu.getAttribute('rel');
       var reversed = hasClass($menu,"reverse");
       var n_items = $options.length - 1;
-      var $tabs = document.getElementById(id).children;
+      var $tabs = document.querySelectorAll(".otabs_content#"+id)[0].children;
 
       // listener
       for (o in $options) {
