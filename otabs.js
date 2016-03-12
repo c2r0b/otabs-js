@@ -1,47 +1,62 @@
-(function() {
-  $(document).ready(function() {
+/* oTabsJS - by Lorenzo Ganni - v1.0 [2015.3.12] */
+(function () {
+  // initalizer
+  window.onload = function() {
+    // utils
+    function hasClass(element, cls) {
+      return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    }
+    function activateMenuOption(obj) {
+      obj.className += ' ' + sel_class;
+    }
+    function activateTabbedContent(obj,index) {
+      for (t in obj)
+        if (t != index)
+          obj[t].style.display = "none";
+        else
+          obj[t].style.display = "block";
+    }
+    function getMenuOptionIndex(elem){
+        var  i = 0;
+        while((elem = elem.previousElementSibling) != null) ++i;
+        return i;
+    }
     // settings
     var sel_class = "active";
-    var rev_class = "reverse";
+    // get objects
+    var $elems = document.querySelectorAll('ul.otabs');
 
-    // controller
-    $("ul.otabs").each(function() {
-
+    for (i in $elems) {
       // get info and objects
-      var id = $(this).attr('rel');
-      var reversed = $(this).hasClass(rev_class);
-      var n_items = $(this).children().size() - 1;
+      var $e = $elems[i];
+      var $menu = $e;
+      var $options = $e.getElementsByTagName('li');
+      var id = $menu.getAttribute('rel');
+      var reversed = hasClass($menu,"reverse");
+      var n_items = $options.length - 1;
+      var $tabs = document.getElementById(id).children;
 
+      // listener
+      for (o in $options) {
+        $options[o].onclick = function() {
+          // toogle 'active' class
+          for ($o in $options)
+            $options[$o].className = "";
+          activateMenuOption(this);
+          // get info and objects
+          var index = getMenuOptionIndex(this);
+          // display correct content
+          activateTabbedContent($tabs,(reversed) ? n_items - index : index);
+        }
+      }
       // menu element to be selected at the beginning
-      var to_select = $(this).data('select');
-      if (to_select == 'last')
-        to_select = n_items;
-      else if (!parseInt(to_select) || to_select > n_items || to_select < 0)
-        to_select = 0;
-
+      var init = $menu.dataset.select;
+      if (!/^[0-9\s\+]+$/.test(init)) init = 0;
+      if (init == "last" || init > n_items) init = n_items;
       // init selection
-      $(this).children().eq(to_select).addClass(sel_class);
-
-      // tabbed content to be selected at the beginning
-      var to_select = (reversed) ? n_items - to_select : to_select;
-
-      $(".otabs_content#"+id).children(':not(:eq('+to_select+'))').hide();
-
-      $(this).children().click(function() {
-
-        // toogle 'active' class
-        $(this).parent().children().removeClass(sel_class);
-        $(this).addClass(sel_class);
-
-        // get info and objects
-        var rel = $('.otabs_content#' + id);
-        var index = $(this).index();
-        var sel = (reversed) ? n_items - index : index;
-
-        // show correct content
-        rel.children().hide();
-        rel.children().eq(sel).show();
-      });
-    });
-  });
+      activateMenuOption($options[init]);
+      // display correct content
+      activateTabbedContent($tabs,(reversed) ? n_items - init : init);
+    }
+  }
 })();
