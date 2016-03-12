@@ -1,6 +1,9 @@
 #ordered-tabs
 Library to create ordered tabbed content using jQuery
 
+##Synopsis
+This simple jQuery code has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup proces and avoid list-content reference errors.
+
 ##Installation
 Simply include the js file (or minified js) to your html:
 ```html
@@ -13,7 +16,7 @@ You'll need jQuery in order to make it work. You can include it from a CDN like 
 ```
 
 ##How to use
-In your html create a menu with this template:
+In your html create a list with this template:
 ```html
 <ul class="otabs" rel="WHATEVER_YOU_WANT">
   <li>..</li>
