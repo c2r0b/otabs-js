@@ -1,5 +1,5 @@
 #ordered-tabs
-Library to create ordered tabbed content using jQuery
+Library to create ordered tabbed content using in HTML using jQuery
 
 ##Synopsis
 This simple jQuery code has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
