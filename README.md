@@ -1,18 +1,13 @@
-#ordered-tabs-jquery
-Library to create ordered tabbed content using in HTML using jQuery
+#oTabsJS
+Library to create ordered tabbed content in HTML
 
 ##Synopsis
-This simple jQuery code has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
+This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
 
 ##Installation
-Simply include the js file (or minified js) to your html:
+Simply include the js file (or minified js) in your html:
 ```html
 <script src="src/lib/otabs.min.js"></script>
-```
-
-You'll need jQuery in order to make it work. You can include it from a CDN like this:
-```html
-<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
 ```
 
 ##How to use
@@ -25,9 +20,9 @@ In your html create a list with this template:
 </ul>
 ```
 
-And then this when you want your tabbed content to appear:
+And then a thing like this when you want your tabbed content to appear:
 ```html
-<div class="otabs_content" id="WHATEVER_YOU_WANT">
+<div id="WHATEVER_YOU_WANT">
   <div>..</div>
   ...
   <div>..</div>
@@ -39,18 +34,16 @@ You can select a specific tab using the <b>data-select</b> attribute. Example:
 ```html
 <ul class="otabs" data-select="42" rel="WHATEVER_YOU_WANT">
 ```
-<b>NOTE:</b> the tabs are numbered from 0 to N and the default value is 0
-
-You can select the last list element by setting the attribute <i>data-select</i> to <b>last</b>. Example:
-```html
-<ul class="otabs" data-select="last" rel="WHATEVER_YOU_WANT">
-```
+<b>Valid values (default is 0):</b>
+<ul>
+  <li>a number between 0 to N</li>
+  <li><i>last</i> for the last tabbed item</li>
+</ul>
 
 You can reverse the display order of the content to be in the reversed order of the menu by using the <b>reverse</b> class like this:
 ```html
 <ul class="otabs reverse" rel="WHATEVER_YOU_WANT">
 ```
-
 
 ##License
  GNU General Public License
