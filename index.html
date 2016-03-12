@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Otabs-js by lorenzoganni</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Otabs-js</h1>
+        <h2>Create ordered tabbed content in HTML</h2>
+        <a href="https://github.com/lorenzoganni/otabs-js" class="button"><small>View project on</small> GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a id="otabsjs" class="anchor" href="#otabsjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>oTabsJS</h1>
+
+<p>Library to create ordered tabbed content in HTML</p>
+
+<h2>
+<a id="synopsis" class="anchor" href="#synopsis" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Synopsis</h2>
+
+<p>This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.</p>
+
+<h2>
+<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+
+<p>Simply include the js file (or minified js) in your html:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>src/lib/otabs.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<h2>
+<a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h2>
+
+<p>In your html create a list with this template:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">li</span>&gt;..&lt;/<span class="pl-ent">li</span>&gt;
+  ...
+  &lt;<span class="pl-ent">li</span>&gt;..&lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ul</span>&gt;</pre></div>
+
+<p>And then use this template where you want your tabbed content to appear:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs_content<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">div</span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
+  ...
+  &lt;<span class="pl-ent">div</span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
+<h4>
+<a id="list-content-binding" class="anchor" href="#list-content-binding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List-content binding</h4>
+
+<p>If you're using this tool more than once in a page you'll need to bind each list with the appropriate tabbed content. You can simply do that using <b>rel</b> and <b>id</b> like this:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>WHATEVER_YOU_WANT<span class="pl-pds">"</span></span>&gt;
+...
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs_content<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>WHATEVER_YOU_WANT<span class="pl-pds">"</span></span>&gt;
+...</pre></div>
+
+<h2>
+<a id="secondary-features" class="anchor" href="#secondary-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Secondary features</h2>
+
+<h4>
+<a id="specific-selection" class="anchor" href="#specific-selection" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Specific selection</h4>
+
+<p>You can select a specific tab using the <b>data-select</b> attribute. Examples:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs<span class="pl-pds">"</span></span> <span class="pl-e">data-select</span>=<span class="pl-s"><span class="pl-pds">"</span>42<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<p><b>Valid values (default is 0):</b></p>
+
+<ul>
+  <li>a number between 0 to N</li>
+  <li>
+<b>last</b> for the last tabbed item</li>
+</ul>
+
+<h4>
+<a id="reverse-order" class="anchor" href="#reverse-order" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reverse order</h4>
+
+<p>You can reverse the display order of the content to be in the reversed order of the menu by using the <b>reverse</b> class like this:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs reverse<span class="pl-pds">"</span></span>&gt;</pre></div>
+
+<h2>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changelog</h2>
+
+<h4>
+<a id="v11-2015312" class="anchor" href="#v11-2015312" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.1 [2015.3.12]</h4>
+
+<ul>
+  <li>Removed jQuery dependency</li>
+  <li>List-content binding is now optional</li>
+</ul>
+
+<h4>
+<a id="v10-2015311" class="anchor" href="#v10-2015311" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.0 [2015.3.11]</h4>
+
+<ul>
+  <li>First version</li>
+</ul>
+
+<h2>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
+
+<p>GNU General Public License</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/lorenzoganni/otabs-js/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/lorenzoganni/otabs-js/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/lorenzoganni/otabs-js"></a> is maintained by <a href="https://github.com/lorenzoganni">lorenzoganni</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
