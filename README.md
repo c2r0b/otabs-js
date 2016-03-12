@@ -39,7 +39,7 @@ You can select a specific tab using the <b>data-select</b> attribute. Example:
 ```html
 <ul class="otabs" data-select="42" rel="WHATEVER_YOU_WANT">
 ```
-<b>NOTE:</b> the tabs ar numbered from 0 to N and the default value is 0
+<b>NOTE:</b> the tabs are numbered from 0 to N and the default value is 0
 
 You can select the last list element by setting the attribute <i>data-select</i> to <b>last</b>. Example:
 ```html
