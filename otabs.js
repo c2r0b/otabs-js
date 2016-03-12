@@ -4,11 +4,11 @@
     var sel_class = "active";
 
     // initialiaze
-    $(".o_tabs_content").children(':not(:eq(0))').hide();
-    $("ul.o_tabs li").eq(0).addClass(sel_class);
+    $(".otabs_content").children(':not(:eq(0))').hide();
+    $("ul.otabs li").eq(0).addClass(sel_class);
 
     // controller
-    $("ul.o_tabs li").click(function() {
+    $("ul.otabs li").click(function() {
 
       // toogle 'active' class
       $(this).parent().children().removeClass(sel_class);
@@ -16,7 +16,7 @@
 
       // get info and objects
       var id = $(this).parent().attr('rel');
-      var rel = $('.o_tabs_content#' + id);
+      var rel = $('.otabs_content#' + id);
       var sel = $(this).index();
 
       // show correct content
