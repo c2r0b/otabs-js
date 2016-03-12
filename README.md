@@ -35,13 +35,13 @@ And then this when you want your tabbed content to appear:
 ```
 
 ##Secondary features
-You can select a specific tab at the beginning through the <b>data-select</b> attribute. Example:
+You can select a specific tab using the <b>data-select</b> attribute. Example:
 ```html
 <ul class="otabs" data-select="42" rel="WHATEVER_YOU_WANT">
 ```
-<b>NOTE:</b> the tabs ar numbered from 0 to N
+<b>NOTE:</b> the tabs ar numbered from 0 to N and the default value is 0
 
-You can select the last list element at the beginning (the first is the default) by setting the attribute <i>data-select</i> to <b>last</b>. Example:
+You can select the last list element by setting the attribute <i>data-select</i> to <b>last</b>. Example:
 ```html
 <ul class="otabs" data-select="last" rel="WHATEVER_YOU_WANT">
 ```
