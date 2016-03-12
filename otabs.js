@@ -31,10 +31,13 @@
       var $e = $elems[i];
       var $menu = $e;
       var $options = $e.getElementsByTagName('li');
-      var id = $menu.getAttribute('rel');
       var reversed = hasClass($menu,"reverse");
       var n_items = $options.length - 1;
-      var $tabs = document.querySelectorAll(".otabs_content#"+id)[0].children;
+      var id = $menu.getAttribute('rel');
+      var $tabs = (id == null) ?
+                    document.querySelectorAll(".otabs_content")[0].children
+                  :
+                    document.querySelectorAll(".otabs_content#"+id)[0].children;
 
       // listener
       for (o in $options) {
