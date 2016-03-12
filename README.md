@@ -19,7 +19,7 @@ In your html create a list with this template:
   <li>..</li>
 </ul>
 ```
-And then a thing like this when you want your tabbed content to appear:
+And then use this template where you want your tabbed content to appear:
 ```html
 <div class="otabs_content">
   <div>..</div>
@@ -56,5 +56,16 @@ You can reverse the display order of the content to be in the reversed order of 
 <ul class="otabs reverse">
 ```
 
+##Changelog
+####v1.1 [2015.3.12]
+<ul>
+  <li>Removed jQuery dependency</li>
+  <li>List-content binding is now optional</li>
+</ul>
+####v1.0 [2015.3.11]
+<ul>
+  <li>First version.</li>
+</ul>
+
 ##License
- GNU General Public License
+GNU General Public License
