@@ -32,10 +32,10 @@ And then a thing like this when you want your tabbed content to appear:
 ##Secondary features
 You can select a specific tab using the <b>data-select</b> attribute. Examples:
 ```html
-<ul class="otabs" data-select="42" rel="WHATEVER_YOU_WANT">
+<ul class="otabs" data-select="42">
 ```
 ```html
-<ul class="otabs" data-select="last" rel="WHATEVER_YOU_WANT">
+<ul class="otabs" data-select="last">
 ```
 <b>Valid values (default is 0):</b>
 <ul>
@@ -45,7 +45,7 @@ You can select a specific tab using the <b>data-select</b> attribute. Examples:
 
 You can reverse the display order of the content to be in the reversed order of the menu by using the <b>reverse</b> class like this:
 ```html
-<ul class="otabs reverse" rel="WHATEVER_YOU_WANT">
+<ul class="otabs reverse">
 ```
 
 ##License
