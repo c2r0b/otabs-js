@@ -22,7 +22,7 @@ In your html create a list with this template:
 
 And then a thing like this when you want your tabbed content to appear:
 ```html
-<div id="WHATEVER_YOU_WANT">
+<div class="otabs_content" id="WHATEVER_YOU_WANT">
   <div>..</div>
   ...
   <div>..</div>
