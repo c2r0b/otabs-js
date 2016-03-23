@@ -1,5 +1,5 @@
-#oTabsJS
-Library to create ordered tabbed content in HTML
+#oTabsJS v1.2
+Library to create ordered/linked tabbed content in HTML
 
 ##Synopsis
 This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
@@ -27,14 +27,18 @@ And then use this template where you want your tabbed content to appear:
   <div>..</div>
 </div>
 ```
+<b>NOTE:</b> you can use whatever type of HTML tag for the content ('div' is just an example)
 
-####List-content binding
+####List-container binding
 If you're using this tool more than once in a page you'll need to bind each list with the appropriate tabbed content. You can simply do that using <b>rel</b> and <b>id</b> like this:
 ```html
 <ul class="otabs" rel="WHATEVER_YOU_WANT">
+  ...
+</ul>
 ...
 <div class="otabs_content" id="WHATEVER_YOU_WANT">
-...
+  ...
+</div>
 ```
 
 
@@ -56,13 +60,36 @@ You can reverse the display order of the content to be in the reversed order of 
 <ul class="otabs reverse">
 ```
 
+####Option-content binding
+If you don't want oTabsJS to automatically bind each option with the corresponding content in order, you can manually bind them adding the <b>link</b> class to the menu and using <b>rel</b> and <b>id</b>:
+```html
+<ul class="otabs link">
+  <li rel="content1">..</li>
+  <li rel="content2">..</li>
+  <li rel="content3">..</li>
+</ul>
+<div class="otabs_content">
+  <div id="content2">..</div>
+  <div id="content3">..</div>
+  <div id="content1">..</div>
+</div>
+```
+
 ##Changelog
-####v1.1 [2016.3.12]
+####v1.2 [2016.03.24]
+<ul>
+  <li>Added linked mode</li>
+  <li>Sample now available in the 'demo' folder</li>
+  <li>General code refactoring</li>
+  <li>[bug fix] data-select=last</li>
+  <li>[bug fix] Multiple use in page</li>
+</ul>
+####v1.1 [2016.03.12]
 <ul>
   <li>Removed jQuery dependency</li>
   <li>List-content binding is now optional</li>
 </ul>
-####v1.0 [2016.3.11]
+####v1.0 [2016.03.11]
 <ul>
   <li>First version</li>
 </ul>
