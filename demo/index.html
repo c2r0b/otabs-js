@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+  <head>
+    <title>oTabsJS Demo</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="../otabs.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>oTabsJS v1.2 Demo</h1>
+      </header>
+      <article>
+        <section>
+          <h2>Default mode</h2>
+          <ul class="otabs" rel="normal">
+            <li>Tab1</li>
+            <li>Tab2</li>
+            <li>Tab3</li>
+            <li>Tab4</li>
+          </ul>
+          <div class="otabs_content" id="normal">
+            <p>Content1</p>
+            <p>Content2</p>
+            <p>Content3</p>
+            <p>Content4</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Manual init selection</h2>
+          <ul class="otabs" data-select="last" rel="selected">
+            <li>Tab1</li>
+            <li>Tab2</li>
+            <li>Tab3</li>
+            <li>Tab4</li>
+          </ul>
+          <div class="otabs_content" id="selected">
+            <p>Content1</p>
+            <p>Content2</p>
+            <p>Content3</p>
+            <p>Content4</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Reversed</h2>
+          <ul class="otabs reverse" rel="reversed">
+            <li>Tab1</li>
+            <li>Tab2</li>
+            <li>Tab3</li>
+            <li>Tab4</li>
+          </ul>
+          <div class="otabs_content" id="reversed">
+            <p>Content1</p>
+            <p>Content2</p>
+            <p>Content3</p>
+            <p>Content4</p>
+          </div>
+        </section>
+
+        <section>
+          <h2>Linked</h2>
+          <ul class="otabs link" rel="linked">
+            <li rel="3">Tab3</li>
+            <li rel="4">Tab4</li>
+            <li rel="1">Tab1</li>
+            <li rel="2">Tab2</li>
+          </ul>
+          <div class="otabs_content" id="linked">
+            <p id="1">Content1</p>
+            <p id="2">Content2</p>
+            <p id="3">Content3</p>
+            <p id="4">Content4</p>
+          </div>
+        </section>
+      </article>
+      <footer>
+        <p><b>Created by</b></p>
+        <p><a href="http://www.lorenzoganni.com" target="_blank">Lorenzo Ganni</a></p>
+        <hr />
+        <p><b>License</b></p>
+        <p>GNU General Public License</p>
+      </footer>
+    </main>
+  </body>
+</html>
