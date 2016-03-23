@@ -57,12 +57,12 @@ You can reverse the display order of the content to be in the reversed order of 
 ```
 
 ##Changelog
-####v1.1 [2015.3.12]
+####v1.1 [2016.3.12]
 <ul>
   <li>Removed jQuery dependency</li>
   <li>List-content binding is now optional</li>
 </ul>
-####v1.0 [2015.3.11]
+####v1.0 [2016.3.11]
 <ul>
   <li>First version</li>
 </ul>
