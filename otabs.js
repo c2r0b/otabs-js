@@ -30,7 +30,7 @@
     linked = hasClass(e,"link");
     n_items = $options.length - 1;
     id = e.getAttribute('rel');
-    if (id != null) id = '#' + id;
+    id = (id != null) ? '#' + id : '';
     $tabs = document.querySelectorAll(".otabs_content"+id)[0].children;
   }
   // change list and content selected item
