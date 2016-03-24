@@ -13,13 +13,13 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>oTabsJS by lorenzoganni</title>
+    <title>oTabsJS v1.2.1 by lorenzoganni</title>
   </head>
 
   <body>
     <header>
       <div class="inner">
-        <h1>oTabsJS</h1>
+        <h1>oTabsJS v1.2.1</h1>
         <h2>Create ordered tabbed content in HTML</h2>
         <a href="https://github.com/lorenzoganni/otabs-js" class="button"><small>View project on</small> GitHub</a>
       </div>
@@ -56,15 +56,20 @@
   &lt;<span class="pl-ent">div</span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
+<p><b>NOTE:</b> you can use whatever type of HTML tag for the content ('div' is just an example)</p>
+
 <h4>
-<a id="list-content-binding" class="anchor" href="#list-content-binding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List-content binding</h4>
+<a id="list-container-binding" class="anchor" href="#list-container-binding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List-container binding</h4>
 
 <p>If you're using this tool more than once in a page you'll need to bind each list with the appropriate tabbed content. You can simply do that using <b>rel</b> and <b>id</b> like this:</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs<span class="pl-pds">"</span></span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>WHATEVER_YOU_WANT<span class="pl-pds">"</span></span>&gt;
+  ...
+&lt;/<span class="pl-ent">ul</span>&gt;
 ...
 &lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs_content<span class="pl-pds">"</span></span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>WHATEVER_YOU_WANT<span class="pl-pds">"</span></span>&gt;
-...</pre></div>
+  ...
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
 <h2>
 <a id="secondary-features" class="anchor" href="#secondary-features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Secondary features</h2>
@@ -91,11 +96,45 @@
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs reverse<span class="pl-pds">"</span></span>&gt;</pre></div>
 
+<h4>
+<a id="option-content-binding" class="anchor" href="#option-content-binding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Option-content binding</h4>
+
+<p>If you don't want oTabsJS to automatically bind each option with the corresponding content in order, you can manually bind them adding the <b>link</b> class to the menu and using <b>rel</b> and <b>id</b>:</p>
+
+<div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">ul</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs link<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">li</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>content1<span class="pl-pds">"</span></span>&gt;..&lt;/<span class="pl-ent">li</span>&gt;
+  &lt;<span class="pl-ent">li</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>content2<span class="pl-pds">"</span></span>&gt;..&lt;/<span class="pl-ent">li</span>&gt;
+  &lt;<span class="pl-ent">li</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>content3<span class="pl-pds">"</span></span>&gt;..&lt;/<span class="pl-ent">li</span>&gt;
+&lt;/<span class="pl-ent">ul</span>&gt;
+&lt;<span class="pl-ent">div</span> <span class="pl-e">class</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs_content<span class="pl-pds">"</span></span>&gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>content2<span class="pl-pds">"</span></span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>content3<span class="pl-pds">"</span></span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
+  &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>content1<span class="pl-pds">"</span></span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
+&lt;/<span class="pl-ent">div</span>&gt;</pre></div>
+
 <h2>
 <a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changelog</h2>
 
 <h4>
-<a id="v11-2015312" class="anchor" href="#v11-2015312" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.1 [2015.3.12]</h4>
+<a id="v121-20160324" class="anchor" href="#v121-20160324" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.2.1 [2016.03.24]</h4>
+
+<ul>
+  <li>[bug fix] list-container binding not necessary</li>
+</ul>
+
+<h4>
+<a id="v12-20160324" class="anchor" href="#v12-20160324" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.2 [2016.03.24]</h4>
+
+<ul>
+  <li>Added linked mode</li>
+  <li>Sample now available in the 'demo' folder</li>
+  <li>General code refactoring</li>
+  <li>[bug fix] data-select=last</li>
+  <li>[bug fix] Multiple use in page</li>
+</ul>
+
+<h4>
+<a id="v11-20160312" class="anchor" href="#v11-20160312" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.1 [2016.03.12]</h4>
 
 <ul>
   <li>Removed jQuery dependency</li>
@@ -103,7 +142,7 @@
 </ul>
 
 <h4>
-<a id="v10-2015311" class="anchor" href="#v10-2015311" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.0 [2015.3.11]</h4>
+<a id="v10-20160311" class="anchor" href="#v10-20160311" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.0 [2016.03.11]</h4>
 
 <ul>
   <li>First version</li>
