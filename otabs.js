@@ -1,4 +1,4 @@
-/* oTabsJS - by Lorenzo Ganni - v1.2 [2016.03.24] */
+/* oTabsJS - by Lorenzo Ganni - v1.2.1 [2016.03.24] */
 (function () {
   // variables
   var options, reversed, linked, n_items, id, $tabs;

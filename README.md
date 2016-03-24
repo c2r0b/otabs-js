@@ -1,4 +1,4 @@
-#oTabsJS v1.2
+#oTabsJS v1.2.1
 Library to create ordered/linked tabbed content in HTML
 
 ##Synopsis
@@ -76,6 +76,10 @@ If you don't want oTabsJS to automatically bind each option with the correspondi
 ```
 
 ##Changelog
+####v1.2.1 [2016.03.24]
+<ul>
+  <li>[bug fix] list-container binding not necessary</li>
+</ul>
 ####v1.2 [2016.03.24]
 <ul>
   <li>Added linked mode</li>
