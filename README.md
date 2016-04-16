@@ -99,4 +99,4 @@ If you don't want oTabsJS to automatically bind each option with the correspondi
 </ul>
 
 ##License
-GNU General Public License
+MIT License
