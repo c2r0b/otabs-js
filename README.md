@@ -4,12 +4,19 @@ Library to create ordered/linked tabbed content in HTML
 ##Synopsis
 This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
 
-##Install and activate
+##Install
+####Using npm
+```
+npm install -S otabs-js
+```
+
+####Manually
 Simply include the js file (or minified js) in your html:
 ```html
 <script src="otabs.min.js"></script>
 ```
 
+##Activate
 Place this JS line where you want oTabs to start working:
 ```html
 <script>

@@ -2,7 +2,7 @@
   "name": "otabs-js",
   "version": "1.3.0",
   "description": "Library to create ordered/linked tabbed content in HTML",
-  "main": "otabs.js",
+  "main": "otabs.min.js",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/lorenzoganni/otabs-js.git"
