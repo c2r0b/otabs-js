@@ -27,7 +27,7 @@ And then use this template where you want your tabbed content to appear:
   <div>..</div>
 </div>
 ```
-<b>NOTE:</b> you can use whatever type of HTML tag for the content ([`div`] is just an example)
+<b>NOTE:</b> you can use whatever type of HTML tag for the content (`div` is just an example)
 
 ####List-container binding
 If you're using this tool more than once in a page you'll need to bind each list with the appropriate tabbed content. You can simply do that using <b>rel</b> and <b>id</b> like this:
@@ -76,9 +76,9 @@ If you don't want oTabsJS to automatically bind each option with the correspondi
 ```
 
 ##Styling
-To target this in your CSS you could use the [`.otabs`] class for the menu and [`.otabs_content`] for the area where the content displays.
+To target this in your CSS you could use the `.otabs` class for the menu and `.otabs_content` for the area where the content displays.
 
-The selected tab has the [`.active`] class and you can simply target the other tabs with [`:not(.active)`].
+The selected tab has the `.active` class and you can simply target the other tabs with `:not(.active)`.
 
 ##Changelog
 ####v1.2.1 [2016.03.24]
