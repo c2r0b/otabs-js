@@ -92,6 +92,15 @@ To target this in your CSS you could use the `.otabs` class for the menu and `.o
 
 The selected tab has the `.active` class and you can simply target the other tabs with `:not(.active)`.
 
+##Compile for production
+If you want to build your own minified version of this library you can do that using npm and gulp.
+
+Install the dependencies (you'll need `npm`):
+`npm install`
+
+Execute gulp to generate the file `otabs.min.js` (you'll need `gulp`):
+`gulp`
+
 ##Changelog
 ####v1.3.0 [2016.10.11]
 <ul>
