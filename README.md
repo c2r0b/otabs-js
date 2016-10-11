@@ -1,13 +1,16 @@
-#oTabsJS v1.2.1
+#oTabsJS v1.3.0
 Library to create ordered/linked tabbed content in HTML
 
 ##Synopsis
 This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
 
-##Installation
+##Install and activate
 Simply include the js file (or minified js) in your html:
 ```html
 <script src="otabs.min.js"></script>
+<script>
+  new oTabs().init();
+</script>
 ```
 
 ##How to use
@@ -75,12 +78,27 @@ If you don't want oTabsJS to automatically bind each option with the correspondi
 </div>
 ```
 
+####Manually refresh oTabs on DOM changes
+```html
+<script>
+  var otabs = new oTabs().init();
+  // ... whatever ...
+  otabs.update();
+</script>
+```
+
 ##Styling
 To target this in your CSS you could use the `.otabs` class for the menu and `.otabs_content` for the area where the content displays.
 
 The selected tab has the `.active` class and you can simply target the other tabs with `:not(.active)`.
 
 ##Changelog
+####v1.3.0 [2016.10.11]
+<ul>
+  <li>manual activation</li>
+  <li>manual refresh</li>
+  <li>npm and gulp for distribution</li>
+</ul>
 ####v1.2.1 [2016.03.24]
 <ul>
   <li>[bug fix] list-container binding not necessary</li>
