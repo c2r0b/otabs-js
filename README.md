@@ -75,6 +75,11 @@ If you don't want oTabsJS to automatically bind each option with the correspondi
 </div>
 ```
 
+##Styling
+To target this in your CSS you could use the '.otabs' class for the menu and '.otabs_content' for the area where the content displays.
+
+The selected tab has the '.active' class and you can simply target the other tabs with ':not(.active)'.
+
 ##Changelog
 ####v1.2.1 [2016.03.24]
 <ul>
