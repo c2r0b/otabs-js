@@ -8,6 +8,10 @@ This simple Javascript library has been created as a simple solution when you ne
 Simply include the js file (or minified js) in your html:
 ```html
 <script src="otabs.min.js"></script>
+```
+
+Place this JS line where you want oTabs to start working:
+```html
 <script>
   new oTabs().init();
 </script>
