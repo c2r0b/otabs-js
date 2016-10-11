@@ -101,6 +101,13 @@ Install the dependencies (you'll need `npm`):
 Execute gulp to generate the file `otabs.min.js` (you'll need `gulp`):
 `gulp`
 
+##Updating
+####From v < 1.3.x
+Simply add this line where you want otabs to start working:
+```html
+<script>new oTabs().init();</script>
+```
+
 ##Changelog
 ####v1.3.0 [2016.10.11]
 <ul>
