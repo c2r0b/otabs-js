@@ -1,41 +1,47 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print">
+    <title>oTabsJS v1.3.0 by lorenzoganni</title>
 
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+    <meta name="viewport" content="width=device-width">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
-    <title>oTabsJS v1.2.1 by lorenzoganni</title>
   </head>
-
   <body>
-    <header>
-      <div class="inner">
-        <h1>oTabsJS v1.2.1</h1>
-        <h2>Create ordered tabbed content in HTML</h2>
-        <a href="https://github.com/lorenzoganni/otabs-js" class="button"><small>View project on</small> GitHub</a>
-      </div>
-    </header>
+    <div class="wrapper">
+      <header>
+        <h1>oTabsJS v1.3.0</h1>
+        <p>Create ordered tabbed content in HTML</p>
 
-    <div id="content-wrapper">
-      <div class="inner clearfix">
-        <section id="main-content">
-          <p>This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.</p>
+        <p class="view"><a href="https://github.com/lorenzoganni/otabs-js">View the Project on GitHub <small>lorenzoganni/otabs-js</small></a></p>
+
+
+        <ul>
+          <li><a href="https://github.com/lorenzoganni/otabs-js/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/lorenzoganni/otabs-js/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/lorenzoganni/otabs-js">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p>This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.</p>
 
 <h2>
-<a id="installation" class="anchor" href="#installation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Installation</h2>
+<a id="install-and-activate" class="anchor" href="#install-and-activate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Install and activate</h2>
 
 <p>Simply include the js file (or minified js) in your html:</p>
 
 <div class="highlight highlight-text-html-basic"><pre>&lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>otabs.min.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</pre></div>
+
+<p>Place this JS line where you want oTabs to start working:</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">  <span class="pl-k">new</span> <span class="pl-en">oTabs</span>().<span class="pl-en">init</span>();</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
 
 <h2>
 <a id="how-to-use" class="anchor" href="#how-to-use" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How to use</h2>
@@ -56,7 +62,7 @@
   &lt;<span class="pl-ent">div</span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
-<p><b>NOTE:</b> you can use whatever type of HTML tag for the content ('div' is just an example)</p>
+<p><b>NOTE:</b> you can use whatever type of HTML tag for the content (<code>div</code> is just an example)</p>
 
 <h4>
 <a id="list-container-binding" class="anchor" href="#list-container-binding" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>List-container binding</h4>
@@ -112,8 +118,54 @@
   &lt;<span class="pl-ent">div</span> <span class="pl-e">id</span>=<span class="pl-s"><span class="pl-pds">"</span>content1<span class="pl-pds">"</span></span>&gt;..&lt;/<span class="pl-ent">div</span>&gt;
 &lt;/<span class="pl-ent">div</span>&gt;</pre></div>
 
+<h4>
+<a id="manually-refresh-otabs-on-dom-changes" class="anchor" href="#manually-refresh-otabs-on-dom-changes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Manually refresh oTabs on DOM changes</h4>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">  <span class="pl-k">var</span> otabs <span class="pl-k">=</span> <span class="pl-k">new</span> <span class="pl-en">oTabs</span>().<span class="pl-en">init</span>();</span>
+<span class="pl-s1">  <span class="pl-c">// ... whatever ...</span></span>
+<span class="pl-s1">  <span class="pl-smi">otabs</span>.<span class="pl-en">update</span>();</span>
+<span class="pl-s1">&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
+<h2>
+<a id="styling" class="anchor" href="#styling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Styling</h2>
+
+<p>To target this in your CSS you could use the <code>.otabs</code> class for the menu and <code>.otabs_content</code> for the area where the content displays.</p>
+
+<p>The selected tab has the <code>.active</code> class and you can simply target the other tabs with <code>:not(.active)</code>.</p>
+
+<h2>
+<a id="compile-for-production" class="anchor" href="#compile-for-production" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Compile for production</h2>
+
+<p>If you want to build your own minified version of this library you can do that using npm and gulp.</p>
+
+<p>Install the dependencies (you'll need <code>npm</code>):
+<code>npm install</code></p>
+
+<p>Execute gulp to generate the file <code>otabs.min.js</code> (you'll need <code>gulp</code>):
+<code>gulp</code></p>
+
+<h2>
+<a id="updating" class="anchor" href="#updating" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Updating</h2>
+
+<h4>
+<a id="from-v--13x" class="anchor" href="#from-v--13x" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>From v &lt; 1.3.x</h4>
+
+<p>Simply add this line where you want otabs to start working:</p>
+
+<div class="highlight highlight-text-html-basic"><pre><span class="pl-s1">&lt;<span class="pl-ent">script</span>&gt;<span class="pl-k">new</span> <span class="pl-en">oTabs</span>().<span class="pl-en">init</span>();&lt;/<span class="pl-ent">script</span>&gt;</span></pre></div>
+
 <h2>
 <a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Changelog</h2>
+
+<h4>
+<a id="v130-20161011" class="anchor" href="#v130-20161011" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.3.0 [2016.10.11]</h4>
+
+<ul>
+  <li>manual activation</li>
+  <li>manual refresh</li>
+  <li>npm and gulp for distribution</li>
+</ul>
 
 <h4>
 <a id="v121-20160324" class="anchor" href="#v121-20160324" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>v1.2.1 [2016.03.24]</h4>
@@ -152,25 +204,13 @@
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>License</h2>
 
 <p>MIT License</p>
-        </section>
-
-        <aside id="sidebar">
-          <a href="https://github.com/lorenzoganni/otabs-js/zipball/master" class="button">
-            <small>Download</small>
-            .zip file
-          </a>
-          <a href="https://github.com/lorenzoganni/otabs-js/tarball/master" class="button">
-            <small>Download</small>
-            .tar.gz file
-          </a>
-
-          <p class="repo-owner"><a href="https://github.com/lorenzoganni/otabs-js"></a> is maintained by <a href="https://github.com/lorenzoganni">lorenzoganni</a>.</p>
-
-          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
-        </aside>
-      </div>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/lorenzoganni">lorenzoganni</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
     </div>
-
-  
+    <script src="javascripts/scale.fix.js"></script>
+    
   </body>
 </html>
