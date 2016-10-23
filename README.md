@@ -10,6 +10,11 @@ This simple Javascript library has been created as a simple solution when you ne
 npm install -S otabs-js
 ```
 
+####Using bower
+```
+bower install otabs-js
+```
+
 ####Manually
 Simply include the js file (or minified js) in your html:
 ```html
