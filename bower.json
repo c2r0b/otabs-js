@@ -1,0 +1,18 @@
+{
+  "name": "otabs-js",
+  "description": "Library to create ordered/linked tabbed content in HTML",
+  "main": "otabs.min.js",
+  "authors": [
+    "lorenzoganni"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lorenzoganni/otabs-js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "demo"
+    "gulpfile.js",
+    "package.json"
+  ]
+}
