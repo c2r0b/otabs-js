@@ -1,27 +1,27 @@
-#oTabsJS v1.3.0
+# oTabsJS v1.3.0
 Library to create ordered/linked tabbed content in HTML
 
-##Synopsis
+## Synopsis
 This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
 
-##Install
-####Using npm
+## Install
+#### Using npm
 ```
 npm install -S otabs-js
 ```
 
-####Using bower
+#### Using bower
 ```
 bower install otabs-js
 ```
 
-####Manually
+#### Manually
 Simply include the js file (or minified js) in your html:
 ```html
 <script src="otabs.min.js"></script>
 ```
 
-##Activate
+## Activate
 Place this JS line where you want oTabs to start working:
 ```html
 <script>
@@ -29,7 +29,7 @@ Place this JS line where you want oTabs to start working:
 </script>
 ```
 
-##How to use
+## How to use
 In your html create a list with this template:
 ```html
 <ul class="otabs">
@@ -48,7 +48,7 @@ And then use this template where you want your tabbed content to appear:
 ```
 <b>NOTE:</b> you can use whatever type of HTML tag for the content (`div` is just an example)
 
-####List-container binding
+#### List-container binding
 If you're using this tool more than once in a page you'll need to bind each list with the appropriate tabbed content. You can simply do that using <b>rel</b> and <b>id</b> like this:
 ```html
 <ul class="otabs" rel="WHATEVER_YOU_WANT">
@@ -61,8 +61,8 @@ If you're using this tool more than once in a page you'll need to bind each list
 ```
 
 
-##Secondary features
-####Specific selection
+## Secondary features
+#### Specific selection
 You can select a specific tab using the <b>data-select</b> attribute. Examples:
 ```html
 <ul class="otabs" data-select="42">
@@ -73,13 +73,13 @@ You can select a specific tab using the <b>data-select</b> attribute. Examples:
   <li><b>last</b> for the last tabbed item</li>
 </ul>
 
-####Reverse order
+#### Reverse order
 You can reverse the display order of the content to be in the reversed order of the menu by using the <b>reverse</b> class like this:
 ```html
 <ul class="otabs reverse">
 ```
 
-####Option-content binding
+#### Option-content binding
 If you don't want oTabsJS to automatically bind each option with the corresponding content in order, you can manually bind them adding the <b>link</b> class to the menu and using <b>rel</b> and <b>id</b>:
 ```html
 <ul class="otabs link">
@@ -94,7 +94,7 @@ If you don't want oTabsJS to automatically bind each option with the correspondi
 </div>
 ```
 
-####Manually refresh oTabs on DOM changes
+#### Manually refresh oTabs on DOM changes
 ```html
 <script>
   var otabs = new oTabs().init();
@@ -103,12 +103,12 @@ If you don't want oTabsJS to automatically bind each option with the correspondi
 </script>
 ```
 
-##Styling
+## Styling
 To target this in your CSS you could use the `.otabs` class for the menu and `.otabs_content` for the area where the content displays.
 
 The selected tab has the `.active` class and you can simply target the other tabs with `:not(.active)`.
 
-##Compile for production
+## Compile for production
 If you want to build your own minified version of this library you can do that using npm and gulp.
 
 Install the dependencies (you'll need `npm`):
@@ -117,25 +117,25 @@ Install the dependencies (you'll need `npm`):
 Execute gulp to generate the file `otabs.min.js` (you'll need `gulp`):
 `gulp`
 
-##Updating
-####From v < 1.3.x
+## Updating
+#### From v < 1.3.x
 Simply add this line where you want otabs to start working:
 ```html
 <script>new oTabs().init();</script>
 ```
 
-##Changelog
-####v1.3.0 [2016.10.11]
+## Changelog
+#### v1.3.0 [2016.10.11]
 <ul>
   <li>manual activation</li>
   <li>manual refresh</li>
   <li>npm and gulp for distribution</li>
 </ul>
-####v1.2.1 [2016.03.24]
+#### v1.2.1 [2016.03.24]
 <ul>
   <li>[bug fix] list-container binding not necessary</li>
 </ul>
-####v1.2 [2016.03.24]
+#### v1.2 [2016.03.24]
 <ul>
   <li>Added linked mode</li>
   <li>Sample now available in the 'demo' folder</li>
@@ -143,15 +143,15 @@ Simply add this line where you want otabs to start working:
   <li>[bug fix] data-select=last</li>
   <li>[bug fix] Multiple use in page</li>
 </ul>
-####v1.1 [2016.03.12]
+#### v1.1 [2016.03.12]
 <ul>
   <li>Removed jQuery dependency</li>
   <li>List-content binding is now optional</li>
 </ul>
-####v1.0 [2016.03.11]
+#### v1.0 [2016.03.11]
 <ul>
   <li>First version</li>
 </ul>
 
-##License
+## License
 MIT License
