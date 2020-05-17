@@ -1,5 +1,6 @@
 # oTabsJS v1.3.0
-Library to create ordered/linked tabbed content in HTML
+Library to create ordered/linked tabbed content in HTML.
+<b>NO LONGER DEVELOPED</b>
 
 ## Synopsis
 This simple Javascript library has been created as a simple solution when you need to display tabbed content in the same order of a list. It is meant to speed up the html markup process and avoid list-content reference errors.
