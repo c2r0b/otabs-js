@@ -125,17 +125,17 @@ Simply add this line where you want otabs to start working:
 ```
 
 ## Changelog
-#### v1.3.0 [2016.10.11]
+### v1.3.0 [2016.10.11]
 <ul>
   <li>manual activation</li>
   <li>manual refresh</li>
   <li>npm and gulp for distribution</li>
 </ul>
-#### v1.2.1 [2016.03.24]
+### v1.2.1 [2016.03.24]
 <ul>
   <li>[bug fix] list-container binding not necessary</li>
 </ul>
-#### v1.2 [2016.03.24]
+### v1.2 [2016.03.24]
 <ul>
   <li>Added linked mode</li>
   <li>Sample now available in the 'demo' folder</li>
@@ -143,12 +143,12 @@ Simply add this line where you want otabs to start working:
   <li>[bug fix] data-select=last</li>
   <li>[bug fix] Multiple use in page</li>
 </ul>
-#### v1.1 [2016.03.12]
+### v1.1 [2016.03.12]
 <ul>
   <li>Removed jQuery dependency</li>
   <li>List-content binding is now optional</li>
 </ul>
-#### v1.0 [2016.03.11]
+### v1.0 [2016.03.11]
 <ul>
   <li>First version</li>
 </ul>
